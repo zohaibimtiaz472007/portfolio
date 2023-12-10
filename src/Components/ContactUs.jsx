@@ -10,6 +10,8 @@ export const ContactUs = () => {
     emailjs.sendForm('service_508tjtn', 'template_ghffcvi', form.current, 'czBsErPqE526GsoXq')
       .then((result) => {
           console.log(result.text);
+          e.target.reset();
+          alert("email sent ")
       }, (error) => {
           console.log(error.text);
       });
